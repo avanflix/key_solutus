@@ -1,0 +1,8 @@
+{
+  "name": "Keysolutus",
+  "short_name": "Keysolutus",
+  "icons": [],
+  "theme_color": "#3E6E99",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Manrope", sans-serif;
+  --font-body: "Libertinus Math", Georgia, "Times New Roman", serif;
+}
+
+@layer base {
+  * {
+    @apply border-gray-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink font-body antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-ink;
+  }
+
+  ::selection {
+    @apply bg-blue-pale text-blue-deep;
+  }
+
+  :focus-visible {
+    outline: 2px solid #3E6E99;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-edit {
+    @apply mx-auto max-w-8xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-heading text-xs font-semibold uppercase tracking-[0.22em] text-blue;
+  }
+
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(62, 110, 153, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(62, 110, 153, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
